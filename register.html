@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/regiester.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <div class="container hidden">
+      <h2>Registration</h2>
+      <div class="register">
+        <form id="registerForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="level">Choose Level</label>
+            <select id="level" name="level" required>
+              <option value="">Select Level</option>
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">
+            <a href="login.html">Register</a>
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    let loader = document.querySelector(".loader");
+    let hidden = document.querySelector(".hidden");
+
+    setTimeout(function () {
+      loader.style.display = "none";
+      document.body.classList.add("appear");
+      hidden.classList.add("appear");
+    }, 2000);
+  </script>
+</html>
